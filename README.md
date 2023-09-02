@@ -1,4 +1,4 @@
-# flutter_application_1
+# Resourcify: Mexico
 
 A new Flutter project.
 
