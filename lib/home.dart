@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/auth.dart';
 import 'package:flutter_application_1/community.dart';
 import 'package:flutter_application_1/graphDaily.dart';
 import 'package:flutter_application_1/myhome.dart';
@@ -63,6 +64,10 @@ List<Widget> _buildCards() {
   ];
 }
 
+Future<void> signOut() async {
+  await Auth().signOut();
+}
+
 
   Widget _buildCard(
       {required Color color, required String text, required int index}) {
@@ -106,12 +111,14 @@ List<Widget> _buildCards() {
           child: Text('Resourcify'),
         ),
         actions: [
+          IconButton(onPressed: signOut, icon: const Icon(Icons.logout)),
           IconButton(
             icon: const Icon(Icons.home),
             onPressed: () {
               // Handle home button press (e.g., navigate to home page)
             },
           ),
+
           IconButton(
             icon: const Icon(Icons.settings),
             onPressed: () {
