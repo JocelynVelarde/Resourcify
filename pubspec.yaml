@@ -78,6 +78,8 @@ flutter:
     - assets/enterprise.png
     - assets/resourcify1.png
     - assets/resourcify2.png
+    - assets/light-bulb-on.png
+    - assets/light-bulb-off.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
