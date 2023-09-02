@@ -3,7 +3,7 @@ import 'package:flutter_application_1/user-company.dart';
 import 'package:dots_indicator/dots_indicator.dart'; // Importa el paquete para los puntos de progreso
 
 class OnboardingScreen extends StatefulWidget {
-  const OnboardingScreen({key});
+  const OnboardingScreen({Key? key}) : super(key: key);
 
   @override
   // ignore: library_private_types_in_public_api
@@ -35,6 +35,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       backgroundColor: const Color(0xFFEDAE49),
       body: Stack(
         children: [
@@ -118,7 +119,7 @@ class OnboardingItem {
 class OnboardingItemWidget extends StatelessWidget {
   final OnboardingItem item;
 
-  const OnboardingItemWidget(this.item, {key});
+  const OnboardingItemWidget(this.item, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
