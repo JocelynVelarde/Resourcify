@@ -4,8 +4,6 @@ import 'package:flutter_application_1/community.dart';
 
 import 'package:flutter_application_1/home.dart';
 
-import 'package:flutter_application_1/loginregister.dart';
-
 class UserCompanyPage extends StatelessWidget {
   const UserCompanyPage({Key? key}) : super(key: key);
 
