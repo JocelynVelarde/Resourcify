@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/loginregister.dart';
 import 'package:flutter_application_1/onboarding.dart';
+import 'widget_tree.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const Main());
 }
 
@@ -14,7 +19,7 @@ class Main extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: const OnboardingScreen(),
+      home: OnboardingScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

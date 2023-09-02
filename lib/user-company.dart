@@ -6,6 +6,7 @@ import 'package:flutter_application_1/home.dart';
 import 'package:flutter_application_1/loginregister.dart';
 import 'package:flutter_application_1/myhome.dart';
 import 'package:flutter_application_1/rewards.dart';
+import 'package:flutter_application_1/widget_tree.dart';
 
 
 class UserCompanyPage extends StatelessWidget {
@@ -46,7 +47,7 @@ class UserCompanyPage extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) => const LoginPage(),
+                  builder: (context) => const WidgetTree(),
                 ));
               },
               child: const Text('User'),
