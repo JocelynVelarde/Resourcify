@@ -34,72 +34,86 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      
-      backgroundColor: const Color(0xFFEDAE49),
-      body: Stack(
-        children: [
-          PageView.builder(
-            controller: _pageController,
-            itemCount: _onboardingItems.length,
-            onPageChanged: (int page) {
-              setState(() {
-                _currentPage = page;
-              });
-            },
-            itemBuilder: (context, index) {
-              return OnboardingItemWidget(_onboardingItems[index]);
-            },
-          ),
-          Positioned(
-            bottom: 20.0,
-            left: 20.0,
-            right: 20.0,
-            child: Column(
-              children: [
-                DotsIndicator(
-                  dotsCount: _onboardingItems.length, // Cantidad de puntos igual a la cantidad de elementos en _onboardingItems
-                  position: _currentPage, // Posición actual
-                  decorator: const DotsDecorator(
-                    color: Colors.grey, // Color de los puntos inactivos
-                    activeColor: Colors.blue, // Color del punto activo
-                  ),
-                ),
-                const SizedBox(height: 20.0),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    if (_currentPage != 0)
-                      ElevatedButton(
-                        onPressed: () {
-                          _pageController.previousPage(
-                            duration: const Duration(milliseconds: 500),
-                            curve: Curves.ease,
-                          );
-                        },
-                        child: const Text('Anterior'),
-                      ),
-                    ElevatedButton(
-                      onPressed: () {
-                        if (_currentPage == _onboardingItems.length - 1) {
-                          Navigator.of(context).pushReplacement(MaterialPageRoute(
-                            builder: (context) => const UserCompanyPage(), 
-                          ));
-                        } else {
-                          _pageController.nextPage(
-                            duration: const Duration(milliseconds: 500),
-                            curve: Curves.ease,
-                          );
-                        }
-                      },
-                      child: Text(_currentPage == _onboardingItems.length - 1 ? 'Comenzar' : 'Siguiente'),
-                    ),
-                  ],
-                ),
-              ],
+    return Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+            colors: [Color.fromARGB(255, 199, 14, 14), Color.fromARGB(255, 247, 201, 76)],
+            stops: [0, 1],
+            begin: AlignmentDirectional(0.87, -1),
+            end: AlignmentDirectional(-0.87, 1),
+        ),
+      ),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        body: Stack(
+          children: [
+            PageView.builder(
+              controller: _pageController,
+              itemCount: _onboardingItems.length,
+              onPageChanged: (int page) {
+                setState(() {
+                  _currentPage = page;
+                });
+              },
+              itemBuilder: (context, index) {
+                return OnboardingItemWidget(_onboardingItems[index]);
+              },
             ),
-          ),
-        ],
+            Positioned(
+              bottom: 20.0,
+              left: 20.0,
+              right: 20.0,
+              child: Column(
+                children: [
+                  DotsIndicator(
+                    dotsCount: _onboardingItems.length, // Cantidad de puntos igual a la cantidad de elementos en _onboardingItems
+                    position: _currentPage, // Posición actual
+                    decorator: const DotsDecorator(
+                      color: Color.fromARGB(255, 185, 185, 185), // Color de los puntos inactivos
+                      activeColor: Colors.blue, // Color del punto activo
+                    ),
+                  ),
+                  const SizedBox(height: 20.0),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      if (_currentPage != 0)
+                        ElevatedButton(
+                          onPressed: () {
+                            _pageController.previousPage(
+                              duration: const Duration(milliseconds: 500),
+                              curve: Curves.ease,
+                            );
+                          },
+                          child: const Text('Anterior'),
+                        ),
+                      Container(
+                        child: Align(
+                          alignment: Alignment.bottomCenter,
+                          child: ElevatedButton(
+                          onPressed: () {
+                            if (_currentPage == _onboardingItems.length - 1) {
+                              Navigator.of(context).pushReplacement(MaterialPageRoute(
+                                builder: (context) => const UserCompanyPage(), 
+                              ));
+                            } else {
+                              _pageController.nextPage(
+                                duration: const Duration(milliseconds: 500),
+                                curve: Curves.ease,
+                              );
+                            }
+                          },
+                          child: Text(_currentPage == _onboardingItems.length - 1 ? 'Comenzar' : 'Siguiente'),
+                          ),
+                        ),  
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
