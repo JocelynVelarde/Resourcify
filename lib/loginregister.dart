@@ -50,7 +50,7 @@ class LoginPageState extends State<LoginPage> {
           height: double.infinity,
           decoration: const BoxDecoration(
             gradient: LinearGradient(
-              colors: [Color.fromARGB(255, 117, 18, 11), Color.fromARGB(255, 228, 172, 89)],
+              colors: [Color.fromARGB(255, 199, 14, 14), Color.fromARGB(255, 247, 201, 76)],
               stops: [0, 1],
               begin: AlignmentDirectional(0.87, -1),
               end: AlignmentDirectional(-0.87, 1),
