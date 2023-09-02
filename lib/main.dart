@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/loginregister.dart';
 import 'package:flutter_application_1/onboarding.dart';
 import 'widget_tree.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -18,7 +19,7 @@ class Main extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: const WidgetTree(),
+      home: OnboardingScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
