@@ -249,7 +249,7 @@ class LoginPageState extends State<LoginPage> {
                                             hidePassw
                                             ? Icons.visibility_outlined
                                             : Icons.visibility_off_outlined,
-                                        color: Color(0xFF57636C),
+                                        color: const Color(0xFF57636C),
                                         size: 24,
                                       ),
                                     ),
@@ -277,7 +277,7 @@ class LoginPageState extends State<LoginPage> {
                                     });
                                 },
                                 child: Text(loggedIn ? 'Register instead' : 'Log in instead',
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontFamily: 'Plus Jakarta Sans',
                                     color: Color(0xFF101213),
                                     fontSize: 14,

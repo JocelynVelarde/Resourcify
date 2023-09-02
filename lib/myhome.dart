@@ -4,6 +4,7 @@ class ManageHomePage extends StatefulWidget {
   const ManageHomePage ({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _ManageHomePageState createState() => _ManageHomePageState();
 }
 
@@ -31,7 +32,7 @@ class _ManageHomePageState extends State<ManageHomePage> {
             backgroundColor: Theme.of(context).primaryColor,
             automaticallyImplyLeading: false,
             leading: IconButton(
-              icon: Icon(
+              icon: const Icon(
                 Icons.arrow_back_rounded,
                 color: Colors.white,
                 size: 30,
@@ -40,7 +41,7 @@ class _ManageHomePageState extends State<ManageHomePage> {
                 Navigator.of(context).pop();
               },
             ),
-            title: Text(
+            title: const Text(
               'Maneja Tu Hogar',
               style: TextStyle(
                 fontFamily: 'Outfit',
@@ -49,7 +50,7 @@ class _ManageHomePageState extends State<ManageHomePage> {
                 fontWeight: FontWeight.w500,
               ),
             ),
-            actions: [],
+            actions: const [],
             centerTitle: false,
             elevation: 2,
           ),
@@ -58,7 +59,7 @@ class _ManageHomePageState extends State<ManageHomePage> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 12, 0, 0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0, 12, 0, 0),
                   child: ListView(
                     padding: EdgeInsets.zero,
                     primary: false,
@@ -66,11 +67,11 @@ class _ManageHomePageState extends State<ManageHomePage> {
                     scrollDirection: Axis.vertical,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 8),
+                        padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 16, 8),
                         child: Container(
                           decoration: BoxDecoration(
                             color: Theme.of(context).colorScheme.background,
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(
                                 blurRadius: 3,
                                 color: Color(0x33000000),
@@ -84,7 +85,7 @@ class _ManageHomePageState extends State<ManageHomePage> {
                               SwitchListTile(
                                 value: true,
                                 onChanged: (newValue) async {},
-                                title: Text(
+                                title: const Text(
                                   'Recamara',
                                   style: TextStyle(
                                     fontSize: 24,
@@ -97,7 +98,7 @@ class _ManageHomePageState extends State<ManageHomePage> {
                                 dense: false,
                                 controlAffinity: ListTileControlAffinity.trailing,
                               ),
-                              Align(
+                              const Align(
                                 alignment: AlignmentDirectional(1, 0),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
@@ -114,11 +115,11 @@ class _ManageHomePageState extends State<ManageHomePage> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 8),
+                        padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 16, 8),
                         child: Container(
                           decoration: BoxDecoration(
                             color: Theme.of(context).colorScheme.background,
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(
                                 blurRadius: 3,
                                 color: Color(0x33000000),
@@ -132,7 +133,7 @@ class _ManageHomePageState extends State<ManageHomePage> {
                               SwitchListTile(
                                 value: false,
                                 onChanged: (newValue) async {},
-                                title: Text(
+                                title: const Text(
                                   'Entrada',
                                   style: TextStyle(
                                     fontSize: 24,
@@ -145,7 +146,7 @@ class _ManageHomePageState extends State<ManageHomePage> {
                                 dense: false,
                                 controlAffinity: ListTileControlAffinity.trailing,
                               ),
-                              Align(
+                              const Align(
                                 alignment: AlignmentDirectional(1, 0),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
@@ -162,11 +163,11 @@ class _ManageHomePageState extends State<ManageHomePage> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 8),
+                        padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 16, 8),
                         child: Container(
                           decoration: BoxDecoration(
                             color: Theme.of(context).colorScheme.background,
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(
                                 blurRadius: 3,
                                 color: Color(0x33000000),
@@ -180,7 +181,7 @@ class _ManageHomePageState extends State<ManageHomePage> {
                               SwitchListTile(
                                 value: true,
                                 onChanged: (newValue) async {},
-                                title: Text(
+                                title: const Text(
                                   'Oficina',
                                   style: TextStyle(
                                     fontSize: 24,
@@ -193,7 +194,7 @@ class _ManageHomePageState extends State<ManageHomePage> {
                                 dense: false,
                                 controlAffinity: ListTileControlAffinity.trailing,
                               ),
-                              Align(
+                              const Align(
                                 alignment: AlignmentDirectional(1, 0),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
@@ -210,11 +211,11 @@ class _ManageHomePageState extends State<ManageHomePage> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 8),
+                        padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 16, 8),
                         child: Container(
                           decoration: BoxDecoration(
                             color: Theme.of(context).colorScheme.background,
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(
                                 blurRadius: 3,
                                 color: Color(0x33000000),
@@ -228,7 +229,7 @@ class _ManageHomePageState extends State<ManageHomePage> {
                               SwitchListTile(
                                 value: true,
                                 onChanged: (newValue) async {},
-                                title: Text(
+                                title: const Text(
                                   'Patio',
                                   style: TextStyle(
                                     fontSize: 24,
@@ -241,7 +242,7 @@ class _ManageHomePageState extends State<ManageHomePage> {
                                 dense: false,
                                 controlAffinity: ListTileControlAffinity.trailing,
                               ),
-                              Align(
+                              const Align(
                                 alignment: AlignmentDirectional(1, 0),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
@@ -258,11 +259,11 @@ class _ManageHomePageState extends State<ManageHomePage> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 8),
+                        padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 16, 8),
                         child: Container(
                           decoration: BoxDecoration(
                             color: Theme.of(context).colorScheme.background,
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(
                                 blurRadius: 3,
                                 color: Color(0x33000000),
@@ -276,7 +277,7 @@ class _ManageHomePageState extends State<ManageHomePage> {
                               SwitchListTile(
                                 value: false,
                                 onChanged: (newValue) async {},
-                                title: Text(
+                                title: const Text(
                                   'TV',
                                   style: TextStyle(
                                     fontSize: 24,
@@ -289,7 +290,7 @@ class _ManageHomePageState extends State<ManageHomePage> {
                                 dense: false,
                                 controlAffinity: ListTileControlAffinity.trailing,
                               ),
-                              Align(
+                              const Align(
                                 alignment: AlignmentDirectional(1, 0),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(

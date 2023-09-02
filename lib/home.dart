@@ -12,6 +12,7 @@ class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _HomePageState createState() => _HomePageState();
 }
 
@@ -44,33 +45,36 @@ class _HomePageState extends State<HomePage> {
 List<Widget> _buildCards() {
   return [
     _buildCard(
-      color: Colors.white.withOpacity(0.6),
+      color: const Color.fromARGB(255, 255, 231, 179),
       text: 'Tips de ahorro',
       index: 1,
     ),
     _buildCard(
-      color: Colors.white.withOpacity(0.6),
+      color: const Color.fromARGB(255, 255, 231, 179),
       text: 'Predicción de consumo',
       index: 2,
     ),
     _buildCard(
-      color: Colors.white.withOpacity(0.6), // Change color to purple
+      color: const Color.fromARGB(255, 255, 231, 179), // Change color to purple
       text: 'Mi cuenta', // Change text to "Recomendaciones de Ahorro"
       index: 3, // Update the index if needed
     ),
     _buildCard(
-      color: Colors.white.withOpacity(0.6),
+      color: const Color.fromARGB(255, 255, 231, 179),
       text: 'Mi Inversión', // Change text to "Mi Inversión"
       index: 4, // Update the index if needed
     ),
-    _buildCard(color: Colors.white.withOpacity(0.6), text: "Sync con dispositivo", index: 5)
+    _buildCard(
+      color: const Color.fromARGB(255, 255, 231, 179), 
+      text: "Sync con dispositivo", 
+      index: 5,
+    )
   ];
 }
 
 Future<void> signOut() async {
   await Auth().signOut();
 }
-
 
   Widget _buildCard(
       {required Color color, required String text, required int index}) {
@@ -214,7 +218,7 @@ Future<void> signOut() async {
                       child: Container(
                         margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
                         decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.6), // Background color
+                          color: const Color.fromARGB(255, 255, 231, 179), // Background color
                           borderRadius:
                               BorderRadius.circular(16), // Rounded borders
                           boxShadow: [
