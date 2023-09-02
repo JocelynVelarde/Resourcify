@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_application_1/community.dart';
-
 import 'package:flutter_application_1/home.dart';
 
 import 'package:flutter_application_1/loginregister.dart';
+import 'package:flutter_application_1/myhome.dart';
+import 'package:flutter_application_1/rewards.dart';
 
 class UserCompanyPage extends StatelessWidget {
   const UserCompanyPage({Key? key}) : super(key: key);
@@ -44,7 +44,7 @@ class UserCompanyPage extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) => const CommunityPage(),
+                  builder: (context) => const LoginPage(),
                 ));
               },
               child: const Text('User'),
