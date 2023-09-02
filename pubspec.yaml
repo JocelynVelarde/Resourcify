@@ -44,6 +44,8 @@ dependencies:
   flutter_spinkit: ^5.2.0
   google_fonts: ^5.1.0
   percent_indicator: ^4.2.3
+  fl_chart: ^0.63.0
+  draw_graph: ^1.0.0
 
 dev_dependencies:
   flutter_test:
