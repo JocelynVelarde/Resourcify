@@ -12,6 +12,7 @@ class LoginPage extends StatefulWidget {
 class LoginPageState extends State<LoginPage> {
   String? errorMessage = '';
   bool loggedIn = true;
+  bool hidePassw = true;
 
   final TextEditingController controllerEmail = TextEditingController();
   final TextEditingController controllerPassword = TextEditingController();
@@ -198,6 +199,7 @@ class LoginPageState extends State<LoginPage> {
                                 width: double.infinity,
                                 child: TextFormField(
                                   controller: controllerPassword,
+                                  obscureText: hidePassw,
                                   decoration: InputDecoration(
                                     labelText: 'Password',
                                     labelStyle: const TextStyle(
@@ -236,20 +238,35 @@ class LoginPageState extends State<LoginPage> {
                                     ),
                                     filled: true,
                                     fillColor: const Color(0xFFF1F4F8),
+                                    suffixIcon: InkWell(
+                                      onTap: () {
+                                        setState(() {
+                                          hidePassw = !hidePassw;
+                                        });
+                                      },
+                                      focusNode: FocusNode(skipTraversal: true),
+                                      child: Icon(
+                                            hidePassw
+                                            ? Icons.visibility_outlined
+                                            : Icons.visibility_off_outlined,
+                                        color: Color(0xFF57636C),
+                                        size: 24,
+                                      ),
                                     ),
-                                  )
-                                ),
+                                  ),
+                                )
                               ),
-                              errorMessageWidget(),
-                              Padding(
-                              padding:
-                                  const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 16),
-                              child: ElevatedButton(
-                                 onPressed: 
-                                  loggedIn ? signInWithEmailAndPassword : createUserWithEmailAndPassword,
-                                  child: Text(loggedIn ? 'Log In' : 'Register'),
-                                ),
+                            ),
+                            errorMessageWidget(),
+                            Padding(
+                            padding:
+                                const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 16),
+                            child: ElevatedButton(
+                                onPressed: 
+                                loggedIn ? signInWithEmailAndPassword : createUserWithEmailAndPassword,
+                                child: Text(loggedIn ? 'Log In' : 'Register'),
                               ),
+                            ),
                             Padding(
                               padding:
                                   const EdgeInsetsDirectional.fromSTEB(0, 12, 0, 12),
