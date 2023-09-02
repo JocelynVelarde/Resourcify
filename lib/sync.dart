@@ -34,7 +34,8 @@ class _LightBulbPageState extends State<LightBulbPage> {
       builder: (BuildContext context) {
         return AlertDialog(
           title: const Text('Dispositivo conectado!'),
-          content: const Text("Tu dispositivo se ha sincronizado correctamente"),
+          content:
+              const Text("Tu dispositivo se ha sincronizado correctamente"),
           actions: <Widget>[
             TextButton(
               child: const Text('OK'),
@@ -50,33 +51,44 @@ class _LightBulbPageState extends State<LightBulbPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Sync con dispositivo'),
-        
-    
-        
-        
-        
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset(
-              isLightOn ? 'assets/light-bulb-on.png' : 'assets/light-bulb-off.png',
-              width: 200, // Adjust the size as needed
-            ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: isCircledLoading ? null : _turnOnLight,
-              child: const Text('Conectar'),
-            ),
-            const SizedBox(height: 20),
-            isCircledLoading
-                ? const CircularProgressIndicator()
-                : const SizedBox(), // Show loading circle when loading
+    return Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            Color.fromARGB(255, 199, 14, 14),
+            Color.fromARGB(255, 247, 201, 76)
           ],
+          stops: [0, 1],
+          begin: AlignmentDirectional(0.87, -1),
+          end: AlignmentDirectional(-0.87, 1),
+        ),
+      ),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        appBar: AppBar(
+          title: const Text('Sync con dispositivo'),
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                isLightOn
+                    ? 'assets/light-bulb-on.png'
+                    : 'assets/light-bulb-off.png',
+                width: 200, // Adjust the size as needed
+              ),
+              const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: isCircledLoading ? null : _turnOnLight,
+                child: const Text('Conectar'),
+              ),
+              const SizedBox(height: 20),
+              isCircledLoading
+                  ? const CircularProgressIndicator()
+                  : const SizedBox(), // Show loading circle when loading
+            ],
+          ),
         ),
       ),
     );
