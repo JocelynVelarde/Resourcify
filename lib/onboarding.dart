@@ -87,21 +87,25 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           },
                           child: const Text('Anterior'),
                         ),
-                      ElevatedButton(
-                        onPressed: () {
-                          if (_currentPage == _onboardingItems.length - 1) {
-                            Navigator.of(context).pushReplacement(MaterialPageRoute(
-                              builder: (context) => const UserCompanyPage(), 
-                            ));
-                          } else {
-                            _pageController.nextPage(
-                              duration: const Duration(milliseconds: 500),
-                              curve: Curves.ease,
-                            );
-                          }
-                        },
-                        child: Text(_currentPage == _onboardingItems.length - 1 ? 'Comenzar' : 'Siguiente'),
-                        //
+                      Container(
+                        child: Align(
+                          alignment: Alignment.bottomCenter,
+                          child: ElevatedButton(
+                          onPressed: () {
+                            if (_currentPage == _onboardingItems.length - 1) {
+                              Navigator.of(context).pushReplacement(MaterialPageRoute(
+                                builder: (context) => const UserCompanyPage(), 
+                              ));
+                            } else {
+                              _pageController.nextPage(
+                                duration: const Duration(milliseconds: 500),
+                                curve: Curves.ease,
+                              );
+                            }
+                          },
+                          child: Text(_currentPage == _onboardingItems.length - 1 ? 'Comenzar' : 'Siguiente'),
+                          ),
+                        ),  
                       ),
                     ],
                   ),
