@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/auth.dart';
 import 'package:flutter_application_1/community.dart';
 import 'package:flutter_application_1/graphDaily.dart';
+import 'package:flutter_application_1/inversion.dart';
 import 'package:flutter_application_1/myhome.dart';
 import 'package:flutter_application_1/rewards.dart';
 import 'package:flutter_application_1/settings.dart';
@@ -85,7 +86,7 @@ Future<void> signOut() async {
         }
         if(index == 4){
           Navigator.push(context,
-              MaterialPageRoute(builder: (context) => const GraphScreen()));
+              MaterialPageRoute(builder: (context) => const InversionPage()));
         }
         if(index == 5){
           Navigator.push(context,
