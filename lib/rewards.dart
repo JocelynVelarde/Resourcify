@@ -5,6 +5,7 @@ class RewardsPage extends StatefulWidget {
   const RewardsPage({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _RewardsPageState createState() => _RewardsPageState();
 }
 
@@ -31,7 +32,7 @@ class _RewardsPageState extends State<RewardsPage> {
           appBar: AppBar(
             automaticallyImplyLeading: false,
             leading: IconButton(
-              icon: Icon(
+              icon: const Icon(
                 Icons.arrow_back_rounded,
                 color: Colors.white,
                 size: 30,
@@ -40,7 +41,7 @@ class _RewardsPageState extends State<RewardsPage> {
                 Navigator.of(context).pop();
               },
             ),
-            title: Text(
+            title: const Text(
               'Rewards',
               style: TextStyle(
                 fontFamily: 'Outfit',
@@ -49,7 +50,7 @@ class _RewardsPageState extends State<RewardsPage> {
                 fontSize: 24,
               ),
             ),
-            actions: [],
+            actions: const [],
             centerTitle: false,
             elevation: 2,
           ),
@@ -61,14 +62,14 @@ class _RewardsPageState extends State<RewardsPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Align(
-                    alignment: AlignmentDirectional(0, -0.65),
+                    alignment: const AlignmentDirectional(0, -0.65),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(16, 12, 16, 0),
+                      padding: const EdgeInsetsDirectional.fromSTEB(16, 12, 16, 0),
                       child: Container(
                         width: double.infinity,
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 238, 44, 44),
-                          boxShadow: [
+                          color: const Color(0xFF36D161),
+                          boxShadow: const [
                             BoxShadow(
                               blurRadius: 4,
                               color: Color(0x1F000000),
@@ -78,13 +79,13 @@ class _RewardsPageState extends State<RewardsPage> {
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(12, 12, 12, 12),
+                          padding: const EdgeInsetsDirectional.fromSTEB(12, 12, 12, 12),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Align(
+                              const Align(
                                 alignment: AlignmentDirectional(0, 0),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 8),
@@ -99,28 +100,29 @@ class _RewardsPageState extends State<RewardsPage> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(0, 12, 0, 0),
+                                padding: const EdgeInsetsDirectional.fromSTEB(0, 12, 0, 0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Stack(
-                                      alignment: AlignmentDirectional(0, 0),
+                                      alignment: const AlignmentDirectional(0, 0),
                                       children: [
                                         Align(
-                                          alignment: AlignmentDirectional(-0.44, -0.01),
+                                          alignment: const AlignmentDirectional(-0.44, -0.01),
                                           child: CircularPercentIndicator(
                                             percent: 0.75,
                                             radius: 60,
                                             lineWidth: 12,
                                             animation: true,
-                                            progressColor: Color(0xFF36D161),
-                                            backgroundColor: Colors.white,
-                                            center: Text(
+                                            progressColor: const Color.fromARGB(255, 221, 124, 45),
+                                            backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+                                            center: const Text(
                                               '153 P',
                                               style: TextStyle(
                                                 fontFamily: 'Outfit',
                                                 color: Colors.white,
+                                                fontSize: 22,
                                               ),
                                             ),
                                           ),
@@ -130,12 +132,12 @@ class _RewardsPageState extends State<RewardsPage> {
                                   ],
                                 ),
                               ),
-                              Divider(
+                              const Divider(
                                 height: 24,
                                 thickness: 1,
-                                color: Color.fromARGB(255, 114, 10, 10),
+                                color: Color.fromARGB(255, 22, 114, 10),
                               ),
-                              Align(
+                              const Align(
                                 alignment: AlignmentDirectional(0, 0),
                                 child: Text(
                                   '47 puntos para nivel 2',
@@ -152,27 +154,27 @@ class _RewardsPageState extends State<RewardsPage> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 12),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 12),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(16, 5, 16, 0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(16, 5, 16, 0),
                           child: Card(
                             clipBehavior: Clip.antiAliasWithSaveLayer,
-                            color: Colors.green,
+                            color: Colors.white,
                             elevation: 4,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(12, 8, 16, 4),
+                              padding: const EdgeInsetsDirectional.fromSTEB(12, 8, 16, 4),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Padding(
+                                  const Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(4, 12, 12, 12),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -184,7 +186,7 @@ class _RewardsPageState extends State<RewardsPage> {
                                           style: TextStyle(
                                             fontSize: 16,
                                             fontWeight: FontWeight.bold,
-                                            color: Colors.white,
+                                            color: Colors.black,
                                           ),
                                         ),
                                         Padding(
@@ -193,7 +195,7 @@ class _RewardsPageState extends State<RewardsPage> {
                                             '3 cupones nuevos',
                                             style: TextStyle(
                                               fontSize: 14,
-                                              color: Colors.white,
+                                              color: Colors.black,
                                             ),
                                           ),
                                         ),
@@ -203,7 +205,7 @@ class _RewardsPageState extends State<RewardsPage> {
                                             'En 27 puntos',
                                             style: TextStyle(
                                               fontSize: 14,
-                                              color: Colors.white,
+                                              color: Colors.grey,
                                             ),
                                           ),
                                         ),
@@ -213,18 +215,18 @@ class _RewardsPageState extends State<RewardsPage> {
                                   Container(
                                     width: 60,
                                     height: 60,
-                                    decoration: BoxDecoration(
-                                      color: Colors.white,
+                                    decoration: const BoxDecoration(
+                                      color: Colors.grey,
                                       shape: BoxShape.circle,
                                     ),
-                                    alignment: AlignmentDirectional(0, 0),
+                                    alignment: const AlignmentDirectional(0, 0),
                                     child: Card(
                                       clipBehavior: Clip.antiAliasWithSaveLayer,
-                                      color: Color(0xFFE0E3E7),
+                                      color: const Color(0xFFE0E3E7),
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(40),
                                       ),
-                                      child: Padding(
+                                      child: const Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(12, 12, 12, 12),
                                         child: Icon(
                                           Icons.card_giftcard,
@@ -241,7 +243,7 @@ class _RewardsPageState extends State<RewardsPage> {
                       ],
                     ),
                   ),
-                  Align(
+                  const Align(
                     alignment: AlignmentDirectional(-1, 0),
                     child: Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(16, 8, 0, 0),
@@ -256,7 +258,7 @@ class _RewardsPageState extends State<RewardsPage> {
                       ),
                     ),
                   ),
-                  Container(
+                  SizedBox(
                     width: 404,
                     height: 128,
                     child: ListView(
@@ -264,20 +266,20 @@ class _RewardsPageState extends State<RewardsPage> {
                       scrollDirection: Axis.horizontal,
                       children: [
                         Align(
-                          alignment: AlignmentDirectional(0, 0),
+                          alignment: const AlignmentDirectional(0, 0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(5, 10, 0, 10),
+                            padding: const EdgeInsetsDirectional.fromSTEB(5, 10, 0, 10),
                             child: Card(
                               clipBehavior: Clip.antiAliasWithSaveLayer,
                               elevation: 5,
-                              color: Colors.lightGreenAccent,
+                              color: const Color(0xFF36D161),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(8),
                               ),
                               child: Container(
                                 width: 200,
                                 height: 140,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   borderRadius: BorderRadius.only(
                                     bottomLeft: Radius.circular(0),
                                     bottomRight: Radius.circular(0),
@@ -285,7 +287,7 @@ class _RewardsPageState extends State<RewardsPage> {
                                     topRight: Radius.circular(12),
                                   ),
                                 ),
-                                child: Padding(
+                                child: const Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(12, 12, 12, 12),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -296,7 +298,7 @@ class _RewardsPageState extends State<RewardsPage> {
                                         '50% descuento',
                                         style: TextStyle(
                                           fontFamily: 'Readex Pro',
-                                          color: Color.fromARGB(255, 30, 143, 68),
+                                          color: Colors.white,
                                           fontSize: 20,
                                         ),
                                       ),
@@ -304,7 +306,7 @@ class _RewardsPageState extends State<RewardsPage> {
                                         'Amazon',
                                         style: TextStyle(
                                           fontFamily: 'Readex Pro',
-                                          color: Color.fromARGB(255, 30, 143, 68),
+                                          color: Colors.white,
                                           fontSize: 14,
                                         ),
                                       ),
@@ -316,12 +318,12 @@ class _RewardsPageState extends State<RewardsPage> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0, 0),
+                          alignment: const AlignmentDirectional(0, 0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(5, 10, 0, 10),
+                            padding: const EdgeInsetsDirectional.fromSTEB(5, 10, 0, 10),
                             child: Card(
                               clipBehavior: Clip.antiAliasWithSaveLayer,
-                              color: Colors.lightGreenAccent,
+                              color: const Color(0xFF36D161),
                               elevation: 5,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(8),
@@ -329,7 +331,7 @@ class _RewardsPageState extends State<RewardsPage> {
                               child: Container(
                                 width: 200,
                                 height: 140,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   borderRadius: BorderRadius.only(
                                     bottomLeft: Radius.circular(0),
                                     bottomRight: Radius.circular(0),
@@ -337,7 +339,7 @@ class _RewardsPageState extends State<RewardsPage> {
                                     topRight: Radius.circular(12),
                                   ),
                                 ),
-                                child: Padding(
+                                child: const Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(12, 12, 12, 12),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -348,7 +350,7 @@ class _RewardsPageState extends State<RewardsPage> {
                                         '2x1 bebidas',
                                         style: TextStyle(
                                           fontFamily: 'Readex Pro',
-                                          color: Color.fromARGB(255, 30, 143, 68),
+                                          color: Colors.white,
                                           fontSize: 20,
                                         ),
                                       ),
@@ -356,7 +358,7 @@ class _RewardsPageState extends State<RewardsPage> {
                                         'Tim Hortons',
                                         style: TextStyle(
                                           fontFamily: 'Readex Pro',
-                                          color: Color.fromARGB(255, 30, 143, 68),
+                                          color: Colors.white,
                                           fontSize: 14,
                                         ),
                                       ),
@@ -370,7 +372,7 @@ class _RewardsPageState extends State<RewardsPage> {
                       ],
                     ),
                   ),
-                  Align(
+                  const Align(
                     alignment: AlignmentDirectional(-1, 0),
                     child: Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(16, 8, 0, 0),
@@ -386,12 +388,12 @@ class _RewardsPageState extends State<RewardsPage> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(16, 12, 16, 0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(16, 12, 16, 20),
                     child: Container(
                       width: double.infinity,
                       decoration: BoxDecoration(
                         color: Colors.white,
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                             blurRadius: 4,
                             color: Color(0x1F000000),
@@ -404,18 +406,18 @@ class _RewardsPageState extends State<RewardsPage> {
                         ),
                       ),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 12),
+                        padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 12),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(12, 8, 16, 4),
+                              padding: const EdgeInsetsDirectional.fromSTEB(12, 8, 16, 4),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Padding(
+                                  const Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(4, 12, 12, 12),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -444,18 +446,18 @@ class _RewardsPageState extends State<RewardsPage> {
                                   Container(
                                     width: 60,
                                     height: 60,
-                                    decoration: BoxDecoration(
+                                    decoration: const BoxDecoration(
                                       color: Colors.white,
                                       shape: BoxShape.circle,
                                     ),
-                                    alignment: AlignmentDirectional(0, 0),
+                                    alignment: const AlignmentDirectional(0, 0),
                                     child: Card(
                                       clipBehavior: Clip.antiAliasWithSaveLayer,
-                                      color: Color(0xFFE0E3E7),
+                                      color: const Color(0xFFE0E3E7),
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(40),
                                       ),
-                                      child: Padding(
+                                      child: const Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(12, 12, 12, 12),
                                         child: Icon(
                                           Icons.energy_savings_leaf_outlined,
@@ -468,7 +470,7 @@ class _RewardsPageState extends State<RewardsPage> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
+                              padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
                               child: LinearPercentIndicator(
                                 percent: 0.5,
                                 width: MediaQuery.of(context).size.width * 0.82,
@@ -476,7 +478,7 @@ class _RewardsPageState extends State<RewardsPage> {
                                 animation: true,
                                 progressColor: Theme.of(context).primaryColor,
                                 backgroundColor: Colors.grey,
-                                barRadius: Radius.circular(24),
+                                barRadius: const Radius.circular(24),
                                 padding: EdgeInsets.zero,
                               ),
                             ),

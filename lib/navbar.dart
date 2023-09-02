@@ -4,10 +4,10 @@ class NavBarWidget extends StatelessWidget {
   final VoidCallback onButton1Pressed;
   final VoidCallback onButton2Pressed;
 
-  NavBarWidget({
+  const NavBarWidget({Key? key, 
     required this.onButton1Pressed,
     required this.onButton2Pressed,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class NavBarWidget extends StatelessWidget {
         children: [
           TextButton(
             onPressed: onButton1Pressed,
-            child: Text(
+            child: const Text(
               'Button 1', // Customize the text
               style: TextStyle(
                 color: Colors.white, // Customize the text color
@@ -27,10 +27,10 @@ class NavBarWidget extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(width: 20.0), // Add space between buttons
+          const SizedBox(width: 20.0), // Add space between buttons
           TextButton(
             onPressed: onButton2Pressed,
-            child: Text(
+            child: const Text(
               'Button 2', // Customize the text
               style: TextStyle(
                 color: Colors.white, // Customize the text color

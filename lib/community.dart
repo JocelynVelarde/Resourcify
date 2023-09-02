@@ -4,6 +4,7 @@ class CommunityPage extends StatefulWidget {
   const CommunityPage({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _CommunityPageState createState() => _CommunityPageState();
 }
 
@@ -30,17 +31,17 @@ class _CommunityPageState extends State<CommunityPage> {
           appBar: AppBar(
             automaticallyImplyLeading: false,
             leading: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(12, 6, 0, 6),
+              padding: const EdgeInsetsDirectional.fromSTEB(12, 6, 0, 6),
               child: Container(
                 width: 44,
                 height: 44,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                 ),
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 0, 12, 0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 12, 0),
                   child: IconButton(
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.arrow_back,
                       color: Colors.white,
                       size: 30,
@@ -52,7 +53,7 @@ class _CommunityPageState extends State<CommunityPage> {
                 ),
               ),
             ),
-            title: Text(
+            title: const Text(
               'Community Posts',
               style: TextStyle(
                 fontFamily: 'Outfit',
@@ -61,7 +62,7 @@ class _CommunityPageState extends State<CommunityPage> {
                 fontWeight: FontWeight.w500,
               ),
             ),
-            actions: [
+            actions: const [
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0, 0, 16, 0),
                 child: Icon(
@@ -83,17 +84,17 @@ class _CommunityPageState extends State<CommunityPage> {
                 children: [
                   ListView(
                     physics: const NeverScrollableScrollPhysics(),
-                    padding: EdgeInsets.fromLTRB(0, 8, 0, 44),
+                    padding: const EdgeInsets.fromLTRB(0, 8, 0, 44),
                     shrinkWrap: true,
                     scrollDirection: Axis.vertical,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 8),
+                        padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 16, 8),
                         child: Container(
                           width: double.infinity,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(
                                 blurRadius: 3,
                                 color: Color(0x411D2429),
@@ -103,14 +104,14 @@ class _CommunityPageState extends State<CommunityPage> {
                             borderRadius: BorderRadius.circular(8),
                           ),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
+                            padding: const EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Padding(
                                   padding:
-                                      EdgeInsetsDirectional.fromSTEB(0, 1, 1, 1),
+                                      const EdgeInsetsDirectional.fromSTEB(0, 1, 1, 1),
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(6),
                                     child: Image.network(
@@ -121,7 +122,7 @@ class _CommunityPageState extends State<CommunityPage> {
                                     ),
                                   ),
                                 ),
-                                Padding(
+                                const Padding(
                                   padding:
                                       EdgeInsetsDirectional.fromSTEB(16, 8, 0, 0),
                                   child: Text(
@@ -134,7 +135,7 @@ class _CommunityPageState extends State<CommunityPage> {
                                     ),
                                   ),
                                 ),
-                                Padding(
+                                const Padding(
                                   padding:
                                       EdgeInsetsDirectional.fromSTEB(16, 4, 8, 0),
                                   child: Text(
@@ -148,7 +149,7 @@ class _CommunityPageState extends State<CommunityPage> {
                                     ),
                                   ),
                                 ),
-                                Padding(
+                                const Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       16, 0, 16, 0),
                                   child: Row(
@@ -175,12 +176,12 @@ class _CommunityPageState extends State<CommunityPage> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 8),
+                        padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 16, 8),
                         child: Container(
                           width: double.infinity,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(
                                 blurRadius: 3,
                                 color: Color(0x411D2429),
@@ -190,14 +191,14 @@ class _CommunityPageState extends State<CommunityPage> {
                             borderRadius: BorderRadius.circular(8),
                           ),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
+                            padding: const EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Padding(
                                   padding:
-                                      EdgeInsetsDirectional.fromSTEB(0, 1, 1, 1),
+                                      const EdgeInsetsDirectional.fromSTEB(0, 1, 1, 1),
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(6),
                                     child: Image.network(
@@ -208,7 +209,7 @@ class _CommunityPageState extends State<CommunityPage> {
                                     ),
                                   ),
                                 ),
-                                Padding(
+                                const Padding(
                                   padding:
                                       EdgeInsetsDirectional.fromSTEB(16, 8, 0, 0),
                                   child: Text(
@@ -221,7 +222,7 @@ class _CommunityPageState extends State<CommunityPage> {
                                     ),
                                   ),
                                 ),
-                                Padding(
+                                const Padding(
                                   padding:
                                       EdgeInsetsDirectional.fromSTEB(16, 4, 8, 0),
                                   child: Text(
@@ -235,7 +236,7 @@ class _CommunityPageState extends State<CommunityPage> {
                                     ),
                                   ),
                                 ),
-                                Padding(
+                                const Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       16, 0, 16, 0),
                                   child: Row(
@@ -262,12 +263,12 @@ class _CommunityPageState extends State<CommunityPage> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 8),
+                        padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 16, 8),
                         child: Container(
                           width: double.infinity,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(
                                 blurRadius: 3,
                                 color: Color(0x411D2429),
@@ -277,14 +278,14 @@ class _CommunityPageState extends State<CommunityPage> {
                             borderRadius: BorderRadius.circular(8),
                           ),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
+                            padding: const EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Padding(
                                   padding:
-                                      EdgeInsetsDirectional.fromSTEB(0, 1, 1, 1),
+                                      const EdgeInsetsDirectional.fromSTEB(0, 1, 1, 1),
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(6),
                                     child: Image.network(
@@ -295,7 +296,7 @@ class _CommunityPageState extends State<CommunityPage> {
                                     ),
                                   ),
                                 ),
-                                Padding(
+                                const Padding(
                                   padding:
                                       EdgeInsetsDirectional.fromSTEB(16, 8, 0, 0),
                                   child: Text(
@@ -308,7 +309,7 @@ class _CommunityPageState extends State<CommunityPage> {
                                     ),
                                   ),
                                 ),
-                                Padding(
+                                const Padding(
                                   padding:
                                       EdgeInsetsDirectional.fromSTEB(16, 4, 8, 0),
                                   child: Text(
@@ -322,7 +323,7 @@ class _CommunityPageState extends State<CommunityPage> {
                                     ),
                                   ),
                                 ),
-                                Padding(
+                                const Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       16, 0, 16, 0),
                                   child: Row(

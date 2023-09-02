@@ -210,8 +210,8 @@ class _InversionPageState extends State<InversionPage> {
                     width: double.infinity,
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      boxShadow: [
-                        const BoxShadow(
+                      boxShadow: const [
+                        BoxShadow(
                           blurRadius: 3,
                           color: Color(0x33000000),
                           offset: Offset(0, 1),
