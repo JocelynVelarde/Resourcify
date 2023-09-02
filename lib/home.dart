@@ -4,6 +4,7 @@ import 'package:flutter_application_1/community.dart';
 import 'package:flutter_application_1/graphDaily.dart';
 import 'package:flutter_application_1/myhome.dart';
 import 'package:flutter_application_1/rewards.dart';
+import 'package:flutter_application_1/sync.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -74,12 +75,26 @@ Future<void> signOut() async {
     return GestureDetector(
       onTap: () {
         print("HOLA");
-        if (index == 1) {
+        if (index == 2) {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => const GraphScreen()));
-        } else {
+        } 
+        if(index == 3){
           Navigator.push(context,
-    MaterialPageRoute(builder: (context) => const GraphScreen()));
+              MaterialPageRoute(builder: (context) => const GraphScreen()));
+        }
+        if(index == 4){
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const GraphScreen()));
+        }
+        if(index == 5){
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => LightBulbPage()));
+        }
+        
+        else {
+          Navigator.push(context,
+    MaterialPageRoute(builder: (context) => const HomePage()));
         }
       },
       child: Card(
