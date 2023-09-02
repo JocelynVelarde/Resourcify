@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/user-company.dart';
-
+import 'package:dots_indicator/dots_indicator.dart'; // Importa el paquete para los puntos de progreso
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -26,7 +26,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       image: 'assets/green-leaf.png', 
     ),
     OnboardingItem(
-      title: 'Recibe recomendaciones de ahorro de energía y unete a la red de usuarios en Resourcify',
+      title: 'Recibe recomendaciones de ahorro de energía y únete a la red de usuarios en Resourcify',
       subtitle: 'Comparte tu experiencia y aprende de otros usuarios.',
       image: 'assets/green-energy.png', 
     ),
@@ -37,7 +37,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     return Scaffold(
       backgroundColor: const Color(0xFFEDAE49),
       body: Stack(
-        
         children: [
           PageView.builder(
             controller: _pageController,
@@ -55,33 +54,46 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             bottom: 20.0,
             left: 20.0,
             right: 20.0,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            child: Column(
               children: [
-                if (_currentPage != 0)
-                  ElevatedButton(
-                    onPressed: () {
-                      _pageController.previousPage(
-                        duration: const Duration(milliseconds: 500),
-                        curve: Curves.ease,
-                      );
-                    },
-                    child: const Text('Anterior'),
+                DotsIndicator(
+                  dotsCount: _onboardingItems.length, // Cantidad de puntos igual a la cantidad de elementos en _onboardingItems
+                  position: _currentPage, // Posición actual
+                  decorator: DotsDecorator(
+                    color: Colors.grey, // Color de los puntos inactivos
+                    activeColor: Colors.blue, // Color del punto activo
                   ),
-                ElevatedButton(
-                  onPressed: () {
-                    if (_currentPage == _onboardingItems.length - 1) {
-                      Navigator.of(context).pushReplacement(MaterialPageRoute(
-                        builder: (context) => const UserCompanyPage(), 
-                      ));
-                    } else {
-                      _pageController.nextPage(
-                        duration: const Duration(milliseconds: 500),
-                        curve: Curves.ease,
-                      );
-                    }
-                  },
-                  child: Text(_currentPage == _onboardingItems.length - 1 ? 'Comenzar' : 'Siguiente'),
+                ),
+                const SizedBox(height: 20.0),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    if (_currentPage != 0)
+                      ElevatedButton(
+                        onPressed: () {
+                          _pageController.previousPage(
+                            duration: const Duration(milliseconds: 500),
+                            curve: Curves.ease,
+                          );
+                        },
+                        child: const Text('Anterior'),
+                      ),
+                    ElevatedButton(
+                      onPressed: () {
+                        if (_currentPage == _onboardingItems.length - 1) {
+                          Navigator.of(context).pushReplacement(MaterialPageRoute(
+                            builder: (context) => const UserCompanyPage(), 
+                          ));
+                        } else {
+                          _pageController.nextPage(
+                            duration: const Duration(milliseconds: 500),
+                            curve: Curves.ease,
+                          );
+                        }
+                      },
+                      child: Text(_currentPage == _onboardingItems.length - 1 ? 'Comenzar' : 'Siguiente'),
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -91,7 +103,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     );
   }
 }
-
 class OnboardingItem {
   final String title;
   final String subtitle;
