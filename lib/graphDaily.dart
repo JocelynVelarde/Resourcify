@@ -41,64 +41,77 @@ class _GraphScreenState extends State<GraphScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-   title: const Padding(
-     padding: EdgeInsets.symmetric(horizontal: 16.0),
-     child: Text('Resourcify'),
-   ),
-   actions: [
-     IconButton(
-       icon: const Icon(Icons.home),
-       onPressed: () {
-         // Handle home button press (e.g., navigate to home page)
-       },
+    return Container(
+      decoration: const BoxDecoration(
+  gradient: LinearGradient(
+    colors: [
+      Color.fromARGB(255, 199, 14, 14),
+      Color.fromARGB(255, 247, 201, 76)
+    ],
+    stops: [0, 1],
+    begin: AlignmentDirectional(0.87, -1),
+    end: AlignmentDirectional(-0.87, 1),
+  ),
+),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        appBar: AppBar(
+       title: const Padding(
+       padding: EdgeInsets.symmetric(horizontal: 16.0),
+       child: Text('Resourcify'),
+       ),
+       actions: [
+       IconButton(
+         icon: const Icon(Icons.home),
+         onPressed: () {
+           // Handle home button press (e.g., navigate to home page)
+         },
+       ),
+       IconButton(
+         icon: const Icon(Icons.settings),
+         onPressed: () {
+           // Handle business button press (e.g., navigate to business page)
+         },
+       ),
+       ],
      ),
-     IconButton(
-       icon: const Icon(Icons.settings),
-       onPressed: () {
-         // Handle business button press (e.g., navigate to business page)
-       },
-     ),
-   ],
- ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Text(
-              "Consumo de Energía por día (GWh)",
-              textAlign: TextAlign.center,
-             
-              style: TextStyle(
-                fontSize: 28,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 2,
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text(
+                "Consumo de Energía por día (GWh)",
+                textAlign: TextAlign.center,
+               
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 2,
+                ),
               ),
             ),
-          ),
-          LineGraph(
-            features: features,
-            size: const Size(420, 450),
-            labelX: const [
-              'Día 1',
-              'Día 2',
-              'Día 3',
-              'Día 4',
-              'Día 5',
-              'Día 6'
-            ],
-            labelY: const ['25%', '45%', '65%', '75%', '85%', '100%'],
-            showDescription: true,
-            graphColor: Colors.black87,
-          ),
-          const SizedBox(
-            height: 50,
-          )
-        ],
+            LineGraph(
+              features: features,
+              size: const Size(420, 450),
+              labelX: const [
+                'Día 1',
+                'Día 2',
+                'Día 3',
+                'Día 4',
+                'Día 5',
+                'Día 6'
+              ],
+              labelY: const ['25%', '45%', '65%', '75%', '85%', '100%'],
+              showDescription: true,
+              graphColor: Colors.black87,
+            ),
+            const SizedBox(
+              height: 50,
+            )
+          ],
+        ),
       ),
     );
   }
