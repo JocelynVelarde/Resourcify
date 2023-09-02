@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/home.dart';
 import 'package:flutter_application_1/loginregister.dart';
 
 class UserCompanyPage extends StatelessWidget {
-  const UserCompanyPage({key});
+  const UserCompanyPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,10 +19,19 @@ class UserCompanyPage extends StatelessWidget {
               width: 200.0,
             ),
             const SizedBox(height: 20.0),
+            const Text(
+              'Elige la vista que mejor te identifique',
+              style: TextStyle(
+                fontSize: 24.0,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
+            ),
+            const SizedBox(height: 20.0),
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) => const LoginPage(),
+                  builder: (context) => const HomePage(),
                 ));
               },
               child: const Text('Company'),
