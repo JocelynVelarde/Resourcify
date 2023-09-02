@@ -48,7 +48,7 @@ class LoginPageState extends State<LoginPage> {
         backgroundColor: Colors.white,
         body: Container(
           height: double.infinity,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             gradient: LinearGradient(
               colors: [Color.fromARGB(255, 199, 14, 14), Color.fromARGB(255, 247, 201, 76)],
               stops: [0, 1],
@@ -56,22 +56,22 @@ class LoginPageState extends State<LoginPage> {
               end: AlignmentDirectional(-0.87, 1),
             ),
           ),
-          alignment: AlignmentDirectional(0, -1),
+          alignment: const AlignmentDirectional(0, -1),
           child: SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 70, 0, 0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0, 70, 0, 0),
                   child: Container(
                     width: 200,
                     height: 70,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16),
                     ),
-                    alignment: AlignmentDirectional(0, 0),
-                    child: Text(
+                    alignment: const AlignmentDirectional(0, 0),
+                    child: const Text(
                       'Resourcify',
                       style: TextStyle(
                         fontFamily: 'Plus Jakarta Sans',
@@ -82,7 +82,7 @@ class LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
-                Padding(
+                const Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
                   child: Icon(
                     Icons.energy_savings_leaf,
@@ -91,15 +91,15 @@ class LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16, 16, 16, 16),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16, 16, 16, 16),
                   child: Container(
                     width: double.infinity,
-                    constraints: BoxConstraints(
+                    constraints: const BoxConstraints(
                       maxWidth: 570,
                     ),
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
                           blurRadius: 4,
                           color: Color(0x33000000),
@@ -109,14 +109,14 @@ class LoginPageState extends State<LoginPage> {
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Align(
-                      alignment: AlignmentDirectional(0, 0),
+                      alignment: const AlignmentDirectional(0, 0),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(32, 32, 32, 32),
+                        padding: const EdgeInsetsDirectional.fromSTEB(32, 32, 32, 32),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Padding(
+                            const Padding(
                               padding:
                                   EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
                               child: Text(
@@ -132,51 +132,51 @@ class LoginPageState extends State<LoginPage> {
                             ),
                             Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 16),
-                              child: Container(
+                                  const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 16),
+                              child: SizedBox(
                                 width: double.infinity,
                                 child: TextFormField(
                                   obscureText: false,
                                   decoration: InputDecoration(
                                     labelText: 'Email',
-                                    labelStyle: TextStyle(
+                                    labelStyle: const TextStyle(
                                       fontFamily: 'Plus Jakarta Sans',
                                       color: Color(0xFF57636C),
                                       fontSize: 16,
                                       fontWeight: FontWeight.w500,
                                     ),
                                     enabledBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Color(0xFFF1F4F8),
                                         width: 2,
                                       ),
                                       borderRadius: BorderRadius.circular(12),
                                     ),
                                     focusedBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Color(0xFF4B39EF),
                                         width: 2,
                                       ),
                                       borderRadius: BorderRadius.circular(12),
                                     ),
                                     errorBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Color(0xFFE0E3E7),
                                         width: 2,
                                       ),
                                       borderRadius: BorderRadius.circular(12),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Color(0xFFE0E3E7),
                                         width: 2,
                                       ),
                                       borderRadius: BorderRadius.circular(12),
                                     ),
                                     filled: true,
-                                    fillColor: Color(0xFFF1F4F8),
+                                    fillColor: const Color(0xFFF1F4F8),
                                   ),
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontFamily: 'Plus Jakarta Sans',
                                     color: Color(0xFF101213),
                                     fontSize: 16,
@@ -188,67 +188,67 @@ class LoginPageState extends State<LoginPage> {
                             ),
                             Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 16),
-                              child: Container(
+                                  const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 16),
+                              child: SizedBox(
                                 width: double.infinity,
                                 child: TextFormField(
                                   decoration: InputDecoration(
                                     labelText: 'Password',
-                                    labelStyle: TextStyle(
+                                    labelStyle: const TextStyle(
                                       fontFamily: 'Plus Jakarta Sans',
                                       color: Color(0xFF57636C),
                                       fontSize: 16,
                                       fontWeight: FontWeight.w500,
                                     ),
                                     enabledBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Color(0xFFF1F4F8),
                                         width: 2,
                                       ),
                                       borderRadius: BorderRadius.circular(12),
                                     ),
                                     focusedBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Color(0xFF4B39EF),
                                         width: 2,
                                       ),
                                       borderRadius: BorderRadius.circular(12),
                                     ),
                                     errorBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Color(0xFFE0E3E7),
                                         width: 2,
                                       ),
                                       borderRadius: BorderRadius.circular(12),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Color(0xFFE0E3E7),
                                         width: 2,
                                       ),
                                       borderRadius: BorderRadius.circular(12),
                                     ),
                                     filled: true,
-                                    fillColor: Color(0xFFF1F4F8),
+                                    fillColor: const Color(0xFFF1F4F8),
                                     ),
                                   )
                                 ),
                               ),
                               Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 16),
+                                  const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 16),
                               child: ElevatedButton(
                                 onPressed: () async {
                                 
                                 },
-                                child: Text('Sign In'),
+                                child: const Text('Sign In'),
                               ),
                             ),
                             Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 12, 0, 12),
+                                  const EdgeInsetsDirectional.fromSTEB(0, 12, 0, 12),
                               child: RichText(
-                                text: TextSpan(
+                                text: const TextSpan(
                                   children: [
                                     TextSpan(
                                       text: 'Sign Up Instead',
