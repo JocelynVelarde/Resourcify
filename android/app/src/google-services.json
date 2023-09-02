@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "237853942864",
+    "project_id": "resourcify-3cb0d",
+    "storage_bucket": "resourcify-3cb0d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237853942864:android:7fbca077666063ca785d55",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "237853942864-vtkup47k93ummcb74e7ksvaiqa3odg0s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSYe8WWHrkv6RIRs2RUyRpP8iG6sE7ScQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "237853942864-vtkup47k93ummcb74e7ksvaiqa3odg0s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
