@@ -14,7 +14,7 @@ class _CommunityPageState extends State<CommunityPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         key: scaffoldKey,
-        backgroundColor: Colors.orangeAccent, // Replace with your desired background color
+        backgroundColor: Colors.orangeAccent,
         appBar: AppBar(
           automaticallyImplyLeading: false,
           leading: Padding(
@@ -145,7 +145,7 @@ class _CommunityPageState extends State<CommunityPage> {
                                   children: [
                                     Icon(
                                       Icons.favorite,
-                                      color: Colors.pink, // Change color
+                                      color: Colors.pink,
                                       size: 20,
                                     ),
                                     Icon(
@@ -232,7 +232,7 @@ class _CommunityPageState extends State<CommunityPage> {
                                   children: [
                                     Icon(
                                       Icons.favorite,
-                                      color: Colors.pink, // Change color
+                                      color: Colors.pink,
                                       size: 20,
                                     ),
                                     Icon(
@@ -319,7 +319,7 @@ class _CommunityPageState extends State<CommunityPage> {
                                   children: [
                                     Icon(
                                       Icons.favorite,
-                                      color: Colors.pink, // Change color
+                                      color: Colors.pink,
                                       size: 20,
                                     ),
                                     Icon(

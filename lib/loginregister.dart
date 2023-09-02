@@ -41,6 +41,10 @@ class LoginPageState extends State<LoginPage> {
       });
     }
   }
+
+  Widget errorMessageWidget() {
+    return Text(errorMessage == '' ? '' : '$errorMessage');
+  }
   
  @override
   Widget build(BuildContext context) {
@@ -136,6 +140,7 @@ class LoginPageState extends State<LoginPage> {
                               child: SizedBox(
                                 width: double.infinity,
                                 child: TextFormField(
+                                  controller: controllerEmail,
                                   obscureText: false,
                                   decoration: InputDecoration(
                                     labelText: 'Email',
@@ -192,6 +197,7 @@ class LoginPageState extends State<LoginPage> {
                               child: SizedBox(
                                 width: double.infinity,
                                 child: TextFormField(
+                                  controller: controllerPassword,
                                   decoration: InputDecoration(
                                     labelText: 'Password',
                                     labelStyle: const TextStyle(
@@ -234,34 +240,26 @@ class LoginPageState extends State<LoginPage> {
                                   )
                                 ),
                               ),
+                              errorMessageWidget(),
                               Padding(
                               padding:
                                   const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 16),
                               child: ElevatedButton(
-                                onPressed: () {
-                                  Navigator.of(context).pushReplacement(MaterialPageRoute(
-                                    builder: (context) => const LoginPage(),
-                                  ));
-                                },
-                                child: const Text('Sign In'),
+                                 onPressed: 
+                                  loggedIn ? signInWithEmailAndPassword : createUserWithEmailAndPassword,
+                                  child: Text(loggedIn ? 'Log In' : 'Register'),
+                                ),
                               ),
-                            ),
                             Padding(
                               padding:
                                   const EdgeInsetsDirectional.fromSTEB(0, 12, 0, 12),
-                              child: RichText(
-                                text: const TextSpan(
-                                  children: [
-                                    TextSpan(
-                                      text: 'Sign Up Instead',
-                                      style: TextStyle(
-                                        fontFamily: 'Plus Jakarta Sans',
-                                        color: Color(0xFF4B39EF),
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w600,
-                                      ),
-                                    )
-                                  ],
+                              child: TextButton(
+                                onPressed: () {
+                                  setState(() {
+                                    loggedIn = !loggedIn;
+                                    });
+                                },
+                                child: Text(loggedIn ? 'Register instead' : 'Log in instead',
                                   style: TextStyle(
                                     fontFamily: 'Plus Jakarta Sans',
                                     color: Color(0xFF101213),
