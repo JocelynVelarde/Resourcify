@@ -3,7 +3,7 @@ import 'package:flutter_application_1/user-company.dart';
 import 'package:dots_indicator/dots_indicator.dart'; // Importa el paquete para los puntos de progreso
 
 class OnboardingScreen extends StatefulWidget {
-  const OnboardingScreen({super.key});
+  const OnboardingScreen({key});
 
   @override
   // ignore: library_private_types_in_public_api
@@ -59,7 +59,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 DotsIndicator(
                   dotsCount: _onboardingItems.length, // Cantidad de puntos igual a la cantidad de elementos en _onboardingItems
                   position: _currentPage, // Posición actual
-                  decorator: DotsDecorator(
+                  decorator: const DotsDecorator(
                     color: Colors.grey, // Color de los puntos inactivos
                     activeColor: Colors.blue, // Color del punto activo
                   ),
@@ -118,7 +118,7 @@ class OnboardingItem {
 class OnboardingItemWidget extends StatelessWidget {
   final OnboardingItem item;
 
-  const OnboardingItemWidget(this.item, {super.key});
+  const OnboardingItemWidget(this.item, {key});
 
   @override
   Widget build(BuildContext context) {
