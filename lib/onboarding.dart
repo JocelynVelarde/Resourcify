@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/user-company.dart';
 
 
 class OnboardingScreen extends StatefulWidget {
@@ -70,8 +71,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 ElevatedButton(
                   onPressed: () {
                     if (_currentPage == _onboardingItems.length - 1) {
-                      // Handle navigation to the next screen after onboarding
-                      // e.g., navigate to the home screen or login page.
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        builder: (context) => const UserCompanyPage(), 
+                      ));
                     } else {
                       _pageController.nextPage(
                         duration: const Duration(milliseconds: 500),
@@ -79,9 +81,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       );
                     }
                   },
-                  child: Text(_currentPage == _onboardingItems.length - 1
-                      ? 'Comenzar'
-                      : 'Siguiente'),
+                  child: Text(_currentPage == _onboardingItems.length - 1 ? 'Comenzar' : 'Siguiente'),
                 ),
               ],
             ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/oboarding.dart';
+import 'package:flutter_application_1/onboarding.dart';
 
 void main() {
   runApp(const Main());

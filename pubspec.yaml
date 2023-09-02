@@ -65,6 +65,7 @@ flutter:
     - assets/renewable-energy.png
     - assets/green-leaf.png
     - assets/green-energy.png
+    - assets/enterprise.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
