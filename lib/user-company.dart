@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/home.dart';
 import 'package:flutter_application_1/loginregister.dart';
 
 class UserCompanyPage extends StatelessWidget {
@@ -8,10 +7,7 @@ class UserCompanyPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('User Page'),
-      
-      ),
+      backgroundColor: const Color(0xFFEDAE49),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
