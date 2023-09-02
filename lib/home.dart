@@ -34,6 +34,9 @@ class _HomePageState extends State<HomePage> {
     ];
   }
 
+
+
+
   Widget _buildCard({required Color color, required String text}) {
     return Card(
       color: color,
@@ -75,30 +78,58 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      body: GridView.builder(
-        padding: const EdgeInsets.only(top: 8.0),
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 3,
-        ),
-        itemCount: 3, // Número de tarjetas
-        itemBuilder: (context, index) {
-          return _buildCards()[index];
-        },
+      body: Column(
+        children: [
+          GridView.builder(
+            shrinkWrap: true,
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 3,
+            ),
+            itemCount: 3, // Número de tarjetas
+            itemBuilder: (context, index) {
+              return _buildCards()[index];
+            },
+          ),
+          SizedBox(height: 20), // Espacio entre las dos filas
+          Text(
+            'Echale un vistazo!', 
+            textAlign: TextAlign.left,
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              
+            ),
+          ),
+          SizedBox(height: 20), // Espacio entre el texto y la segunda fila
+          GridView.builder(
+            shrinkWrap: true,
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+            ),
+            itemCount: 2, // Número de nuevos cuadros medianos
+            itemBuilder: (context, index) {
+              // Aquí puedes construir los cuadros medianos según tus necesidades
+              return _buildCard(
+                color: Colors.purple, // Personaliza el color
+                text: 'Recomendaciones de ahorro', // Personaliza el texto
+              );
+           
+              
+            },
+          ),
+        ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Page 1',
+            icon: Icon(Icons.savings),
+            label: 'Plan de ahorro',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Page 2',
+            icon: Icon(Icons.emoji_events),
+            label: 'Rewards',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'Page 3',
-          ),
+          BottomNavigationBarItem(icon: Icon(Icons.favorite), label: "Comparte"),
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.green,
