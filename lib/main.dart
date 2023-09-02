@@ -1,35 +1,38 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/oboarding.dart';
 
 void main() {
-  runApp(MyMaterialApp());
+  runApp(const Main());
 }
 
-class MyMaterialApp extends StatelessWidget {
+class Main extends StatelessWidget {
+  const Main({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'My Material App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
       ),
-      home: MyHomePage(),
+      home: const OnboardingScreen(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('My Material App'),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, Flutter!',
-          style: TextStyle(fontSize: 24.0),
-        ),
-      ),
-    );
-  }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
