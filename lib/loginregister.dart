@@ -120,7 +120,7 @@ class LoginPageState extends State<LoginPage> {
                               padding:
                                   EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
                               child: Text(
-                                'Welcome Back',
+                                'Welcome!',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontFamily: 'Plus Jakarta Sans',
@@ -238,8 +238,10 @@ class LoginPageState extends State<LoginPage> {
                               padding:
                                   const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 16),
                               child: ElevatedButton(
-                                onPressed: () async {
-                                
+                                onPressed: () {
+                                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                                    builder: (context) => const LoginPage(),
+                                  ));
                                 },
                                 child: const Text('Sign In'),
                               ),
