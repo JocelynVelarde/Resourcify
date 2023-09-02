@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/home.dart';
+import 'package:flutter_application_1/loginregister.dart';
 
 class UserCompanyPage extends StatelessWidget {
   const UserCompanyPage({super.key});
@@ -24,7 +25,7 @@ class UserCompanyPage extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) => const HomePage(),
+                  builder: (context) => const LoginPage(),
                 ));
               },
               child: const Text('Company'),
@@ -33,7 +34,7 @@ class UserCompanyPage extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) => const HomePage(),
+                  builder: (context) => const LoginPage(),
                 ));
               },
               child: const Text('User'),
